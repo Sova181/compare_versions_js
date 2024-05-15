@@ -27,6 +27,8 @@ function compareVersions(version1, version2) {
     }
 } 
 
-console.log(compareVersions("0.1", "0.2")); //-1
+module.exports = compareVersions
+/*  console.log(compareVersions("0.1", "0.2")); //-1
 console.log(compareVersions("0.2", "0.1")); // 1
 console.log(compareVersions("4.2", "4.2")); // 0 
+*/ 
