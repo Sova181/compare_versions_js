@@ -10,22 +10,15 @@ function compareVersions(version1, version2) {
     let minor2 = parseInt(parts2[1]);
 
     // Сравниваем мажорные и минорные части
-    if (major1 > major2) {
+    if (major1 > major2 || minor1 > minor2) {
         return 1;
-    } else if (major1 < major2) {
+    } if (major1 < major2 || minor1 < minor2) {
         return -1;
     } else {
-        // Если мажорные части равны, сравниваем минорные
-        if (minor1 > minor2) {
-            return 1;
-        } else if (minor1 < minor2) {
-            return -1;
-        } else {
-            // Если и минорные части равны, версии равны
+            //версии равны
             return 0;
         }
     }
-} 
 
 module.exports = compareVersions
 /*  console.log(compareVersions("0.1", "0.2")); //-1
